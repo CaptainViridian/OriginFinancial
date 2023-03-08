@@ -1,5 +1,8 @@
-import financialHealthEvaluation.FinancialHealthClassification
-import financialHealthEvaluation.FinancialHealthClassification.*
+package services
+
+import domain.FinancialHealthClassification
+import domain.FinancialHealthClassification.*
+import domain.subtractPercentage
 import java.math.BigDecimal
 import java.math.MathContext
 
