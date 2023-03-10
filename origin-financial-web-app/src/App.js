@@ -1,7 +1,10 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
-import '@fontsource/work-sans'
 import {styled} from '@mui/system'
+import FinancialHealthAssessment from './pages/FinancialHealthAssessment'
+
+import '@fontsource/work-sans'
+import '@fontsource/rubik'
 
 const AppRoot = styled('div')(({theme}) => ({
     backgroundColor: theme.palette.background,
@@ -18,9 +21,9 @@ const AppRoot = styled('div')(({theme}) => ({
 function App() {
     return (
         <AppRoot>
-            <Header />
-
-            <Footer />
+            <Header/>
+            <FinancialHealthAssessment/>
+            <Footer/>
         </AppRoot>
     )
 }
