@@ -20,7 +20,7 @@ const palette = {
     error: {
         main: '#D32A36',
     },
-    background: '#E5E5E5',
+    background: '#F4F8FA',
 }
 const typography = {
     info: {
