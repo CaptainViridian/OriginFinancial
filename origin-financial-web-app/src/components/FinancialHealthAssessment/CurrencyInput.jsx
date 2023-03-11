@@ -1,7 +1,7 @@
 import {styled} from '@mui/system'
 import dollar from '../../assets/dollar.svg'
 
-const CurrencyInput = styled('input')(({theme}) => ({
+const Input = styled('input')(({theme}) => ({
     width: '100%',
     boxSizing: 'border-box',
     borderRadius: theme.spacing(0.5),
@@ -19,5 +19,15 @@ const CurrencyInput = styled('input')(({theme}) => ({
     backgroundImage: `url(${dollar})`,
     overflow: 'hidden',
 }))
+
+function CurrencyInput() {
+    return (
+        <Input
+            onChange={() => {
+                // const actualValue = e.target.value
+            }}
+        />
+    )
+}
 
 export default CurrencyInput
