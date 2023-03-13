@@ -5,6 +5,7 @@ import FinancialHealthAssessment from './pages/FinancialHealthAssessment'
 
 import '@fontsource/work-sans'
 import '@fontsource/rubik'
+import {useState} from 'react'
 
 const AppRoot = styled('div')(({theme}) => ({
     backgroundColor: theme.palette.background,
@@ -19,10 +20,14 @@ const AppRoot = styled('div')(({theme}) => ({
 }))
 
 function App() {
+    const [assessmentResult, setAssessmentResult] = useState(null)
+    
+
     return (
         <AppRoot>
             <Header/>
             <FinancialHealthAssessment/>
+
             <Footer/>
         </AppRoot>
     )

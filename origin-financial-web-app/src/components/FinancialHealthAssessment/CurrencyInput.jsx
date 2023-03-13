@@ -11,6 +11,7 @@ const Input = styled('input')(({theme}) => ({
     lineHeight: '120%',
     fontWeight: 600,
     padding: theme.spacing(1.5, 1.5, 1.5, 4.2),
+    marginTop: theme.spacing(1),
     color: theme.palette.text.secondary,
 
     backgroundColor: 'transparent',
