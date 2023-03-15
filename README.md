@@ -44,7 +44,7 @@ the testing utility.
 
 ## Building and Running
 ### Back-end
-See here.
+See [here](./rest-api/README.md).
 
 ### Front-end
-See here.
+See [here](./origin-financial-web-app/README.md).
