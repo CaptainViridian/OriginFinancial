@@ -21,13 +21,15 @@ const AppRoot = styled('div')(({theme}) => ({
 }))
 
 function App() {
-    const [assessmentResult, setAssessmentResult] = useState('HEALTHY')
+    const [assessmentResult, setAssessmentResult] = useState(null)
 
     return (
         <AppRoot>
             <Header/>
             {!assessmentResult
-                ? <FinancialHealthAssessment/>
+                ? <FinancialHealthAssessment
+                    onSubmit={setAssessmentResult}
+                />
                 : <AssessmentResult
                     onClickReturn={() => setAssessmentResult(null)}
                     assessmentResult={assessmentResult}/>

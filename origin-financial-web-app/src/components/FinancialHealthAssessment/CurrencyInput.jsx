@@ -1,5 +1,6 @@
 import {styled} from '@mui/system'
 import dollar from '../../assets/dollar.svg'
+import PropTypes from 'prop-types'
 
 const Input = styled('input')(({theme}) => ({
     width: '100%',
@@ -21,14 +22,19 @@ const Input = styled('input')(({theme}) => ({
     overflow: 'hidden',
 }))
 
-function CurrencyInput() {
+function CurrencyInput({value, onChange}) {
     return (
         <Input
-            onChange={() => {
-                // const actualValue = e.target.value
-            }}
+            type='number'
+            onChange={onChange}
+            value={value}
         />
     )
 }
 
 export default CurrencyInput
+
+CurrencyInput.propTypes = {
+    value: PropTypes.number,
+    onChange: PropTypes.func.isRequired,
+}

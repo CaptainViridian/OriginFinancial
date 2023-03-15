@@ -8,10 +8,10 @@ const Label = styled('label')(({theme}) => ({
     },
 }))
 
-const LabeledCurrencyInput = ({labelText}) => (
+const LabeledCurrencyInput = ({labelText, ...props}) => (
     <div>
         <Label sx={{typography: 'label'}}>{labelText}</Label>
-        <CurrencyInput type='number'/>
+        <CurrencyInput {...props} />
     </div>
 )
 
