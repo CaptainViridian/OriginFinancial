@@ -44,11 +44,19 @@ export default function AssessmentForm({onSubmit}) {
     return (
         <Form onSubmit={function (e) {
             e.preventDefault()
+            if(!annualIncome || annualIncome <= 0) {
+                alert('Annual income must be provided and be greater than 0')
+                return
+            }
+            if(!monthlyCosts || monthlyCosts <= 0) {
+                alert('Monthly costs must be provided and be greater than 0')
+                return
+            }
             onSubmit(annualIncome, monthlyCosts)
         }}>
             <FieldsContainer>
-                <LabeledCurrencyInput value={annualIncome} onChange={(e) => setAnnualIncome(e.target.value)} labelText='Annual income'/>
-                <LabeledCurrencyInput value={monthlyCosts} onChange={(e) => setMonthlyCosts(e.target.value)} labelText='Monthly costs'/>
+                <LabeledCurrencyInput required value={annualIncome} onChange={(e) => setAnnualIncome(e.target.value)} labelText='Annual income'/>
+                <LabeledCurrencyInput required value={monthlyCosts} onChange={(e) => setMonthlyCosts(e.target.value)} labelText='Monthly costs'/>
             </FieldsContainer>
             <ButtonContainer>
                 <SubmitButton sx={{typography: 'buttonText'}} type='submit'>Continue</SubmitButton>
