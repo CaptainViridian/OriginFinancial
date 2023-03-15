@@ -1,12 +1,10 @@
 import {styled} from '@mui/system'
 
 const Container = styled('div')(({ theme }) => ({
+    alignItems: 'center',
     padding: theme.spacing(2),
-    [theme.breakpoints.up('md')]: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-    },
+    display: 'flex',
+    flexDirection: 'column',
 }))
 
 export default Container

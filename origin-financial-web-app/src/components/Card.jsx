@@ -8,8 +8,8 @@ const Card = styled('main')(({theme}) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    maxWidth: theme.spacing(60),
     gap: theme.spacing(2),
+    maxWidth: theme.spacing(60),
     [theme.breakpoints.up('md')]: {
         padding: theme.spacing(4),
         gap: theme.spacing(3),

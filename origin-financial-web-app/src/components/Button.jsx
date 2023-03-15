@@ -6,7 +6,7 @@ const Button = styled('button')(({theme}) => ({
     borderWidth: 0,
     width: '100%',
     maxWidth: theme.spacing(40),
-    padding: theme.spacing(2.5),
+    padding: theme.spacing(2),
 }))
 
 export default Button

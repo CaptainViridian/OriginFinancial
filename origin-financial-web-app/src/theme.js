@@ -45,6 +45,13 @@ const typography = {
         fontSize: '0.875rem',
         color: palette.info.main,
     },
+    h4Result:  {
+        fontFamily: 'Work Sans',
+        lineHeight: '150%',
+        fontWeight: 400,
+        fontSize: '0.875rem',
+        color: palette.text.secondary,
+    },
     info: {
         fontFamily: 'Work Sans',
         fontSize: '0.75rem',

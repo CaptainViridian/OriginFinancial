@@ -5,6 +5,7 @@ import FinancialHealthAssessment from './pages/FinancialHealthAssessment'
 
 import '@fontsource/work-sans'
 import '@fontsource/rubik'
+import AssessmentResult from './pages/AssessmentResult'
 import {useState} from 'react'
 
 const AppRoot = styled('div')(({theme}) => ({
@@ -20,14 +21,17 @@ const AppRoot = styled('div')(({theme}) => ({
 }))
 
 function App() {
-    const [assessmentResult, setAssessmentResult] = useState(null)
-    
+    const [assessmentResult, setAssessmentResult] = useState('HEALTHY')
 
     return (
         <AppRoot>
             <Header/>
-            <FinancialHealthAssessment/>
-
+            {!assessmentResult
+                ? <FinancialHealthAssessment/>
+                : <AssessmentResult
+                    onClickReturn={() => setAssessmentResult(null)}
+                    assessmentResult={assessmentResult}/>
+            }
             <Footer/>
         </AppRoot>
     )

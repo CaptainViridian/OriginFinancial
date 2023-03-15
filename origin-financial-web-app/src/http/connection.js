@@ -13,6 +13,6 @@ export function postFinancialHealthEvaluation({
         }),
     })
         .then(res => res.json())
-        .then(({result}) => result)
+        .then(({result}) => result.toUpperCase())
         .catch(console.log)
 }
