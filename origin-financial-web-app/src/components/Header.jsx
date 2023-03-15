@@ -11,7 +11,7 @@ const Header = styled('header')(({theme}) => ({
 export default function AppHeader() {
     return (
         <Header>
-            <img src={titleLogo} alt='Origin Logo'/>
+            <img src={titleLogo} alt='Origin written Logo'/>
         </Header>
     )
 }

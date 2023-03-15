@@ -55,8 +55,20 @@ export default function AssessmentForm({onSubmit}) {
             onSubmit(annualIncome, monthlyCosts)
         }}>
             <FieldsContainer>
-                <LabeledCurrencyInput required value={annualIncome} onChange={(e) => setAnnualIncome(e.target.value)} labelText='Annual income'/>
-                <LabeledCurrencyInput required value={monthlyCosts} onChange={(e) => setMonthlyCosts(e.target.value)} labelText='Monthly costs'/>
+                <LabeledCurrencyInput
+                    required
+                    value={annualIncome}
+                    onChange={(e) => setAnnualIncome(e.target.value)}
+                    labelText='Annual income'
+                    id='annualIncome'
+                />
+                <LabeledCurrencyInput
+                    required
+                    id='monthlyCosts'
+                    value={monthlyCosts}
+                    onChange={(e) => setMonthlyCosts(e.target.value)}
+                    labelText='Monthly costs'
+                />
             </FieldsContainer>
             <ButtonContainer>
                 <SubmitButton sx={{typography: 'buttonText'}} type='submit'>Continue</SubmitButton>

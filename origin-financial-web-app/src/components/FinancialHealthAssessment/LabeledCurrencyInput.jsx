@@ -8,15 +8,16 @@ const Label = styled('label')(({theme}) => ({
     },
 }))
 
-const LabeledCurrencyInput = ({labelText, ...props}) => (
+const LabeledCurrencyInput = ({labelText, id, ...props}) => (
     <div>
-        <Label sx={{typography: 'label'}}>{labelText}</Label>
-        <CurrencyInput {...props} />
+        <Label htmlFor={id} sx={{typography: 'label'}}>{labelText}</Label>
+        <CurrencyInput id={id} {...props} />
     </div>
 )
 
 LabeledCurrencyInput.propTypes = {
     labelText: PropTypes.string,
+    id: PropTypes.string.isRequired,
 }
 
 export default LabeledCurrencyInput

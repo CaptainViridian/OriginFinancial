@@ -22,12 +22,11 @@ const Input = styled('input')(({theme}) => ({
     overflow: 'hidden',
 }))
 
-function CurrencyInput({value, onChange}) {
+function CurrencyInput({...props}) {
     return (
         <Input
             type='number'
-            onChange={onChange}
-            value={value}
+            {...props}
         />
     )
 }
@@ -37,4 +36,5 @@ export default CurrencyInput
 CurrencyInput.propTypes = {
     value: PropTypes.number,
     onChange: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequired,
 }
