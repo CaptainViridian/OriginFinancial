@@ -21,6 +21,8 @@ For more detailed explanation, see the [CRA-README](CRA-README.md).
 
 Building requires [NPM](https://www.npmjs.com/).
 
+Before build or testing for the first time, run `npm install` to resolve dependencies.
+
 ### Building
 To create a production build, run `npm run build` in the root folder.
 The optimized build can be deployed to the web server of preference. Deployment will not be covered
