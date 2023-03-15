@@ -48,3 +48,4 @@ See [here](./rest-api/README.md).
 
 ### Front-end
 See [here](./origin-financial-web-app/README.md).
+(It's important to notice that full functionality of the web-app requires the API to be running).
